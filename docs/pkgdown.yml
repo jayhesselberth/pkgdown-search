@@ -11,6 +11,6 @@ articles:
   output: test/output.html
   pdf: test/pdf.html
 urls:
-  reference: http://pkgdown.r-lib.org/reference
-  article: http://pkgdown.r-lib.org/articles
+  reference: http://pkgdown-search.netlify.com/reference
+  article: http://pkgdown-search.netlify.com/articles
 

@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/as_pkgdown.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/as_pkgdown.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/autolink_html.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/autolink_html.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_articles.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_articles.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_home.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_home.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_news.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_news.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_reference.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_reference.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_site.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_site.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/build_tutorials.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/build_tutorials.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/clean_site.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/clean_site.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/in_pkgdown.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/in_pkgdown.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/init_site.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/init_site.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/preview_site.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/preview_site.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/reexports.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/reexports.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/render_page.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/render_page.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/templates.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/templates.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/test-dont.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/test-dont.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/test-figures.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/test-figures.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/test-links.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/test-links.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/reference/test-lists.html</loc>
+    <loc>http://pkgdown-search.netlify.com/reference/test-lists.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/pkgdown.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/pkgdown.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/details.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/details.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/external.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/external.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/figures.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/figures.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/highlight.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/highlight.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/jss.pdf</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/jss.pdf</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/output.html</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/output.html</loc>
   </url>
   <url>
-    <loc>http://pkgdown.r-lib.org/articles/test/pdf.pdf</loc>
+    <loc>http://pkgdown-search.netlify.com/articles/test/pdf.pdf</loc>
   </url>
 </urlset>
