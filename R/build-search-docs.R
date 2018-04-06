@@ -2,16 +2,21 @@
 build_docsearch_json <- function(pkg = ".") {
   pkg <- as_pkgdown(pkg)
 
+  index_name <- pkg$meta$template$params$docsearch$index_name
+  if (is.null(index_name)) {
+    return()
+  }
+
   data <- list(
-    "index_name" = pkg$package,
+    "index_name" = index_name,
     "start_urls" = list(pkg$meta$url),
     "stop_urls" = c("index.html", "authors.html", "/LICENSE", "/news/"),
     "sitemap_urls" = list(paste0(pkg$meta$url, "/", "sitemap.xml")),
     "selectors" = list(
       "lvl0" = ".contents h1",
-      "lvl1" = ".contents h2",
-      "lvl2" = ".contents h3, .contents th",
-      "lvl3" = ".contents .name",
+      "lvl1" = ".contents .name",
+      "lvl2" = ".contents h2",
+      "lvl3" = ".contents h3, .contents th",
       "lvl4" = ".contents h4",
       "text" = ".contents p, .contents li, .usage, .template-article .contents .pre"
     ),
@@ -27,6 +32,8 @@ build_docsearch_json <- function(pkg = ".") {
     pretty = TRUE,
     auto_unbox = TRUE
   )
+
+  invisible()
 }
 
 build_sitemap <- function(pkg = ".") {
