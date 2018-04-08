@@ -18,7 +18,7 @@
       "default_value": "pkgdown Homepage"
     },
     "lvl1": {
-      "selector": ".contents h2, .ref-description",
+      "selector": ".contents h2",
       "default_value": "More info"
     },
     "lvl2": {
@@ -26,7 +26,7 @@
       "default_value": "Context"
     },
     "lvl3": {
-      "selector": ".ref-arguments td"
+      "selector": ".ref-arguments td, .ref-description p"
     },
     "text": ".contents p, .contents li, .usage, .template-article .contents .pre"
   },
@@ -37,5 +37,5 @@
   "custom_settings": {
     "separatorsToIndex": "_"
   },
-  "nb_hits": 5098
+  "nb_hits": 448
 }
