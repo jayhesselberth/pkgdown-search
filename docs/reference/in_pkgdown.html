@@ -140,7 +140,7 @@ pkgdown and regular documentation." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Determine if code is executed by pkgdown</h1>
-    <small>Source: <a href='https://github.com/hadley/pkgdown/blob/master/R/pkgdown.R'><code>R/pkgdown.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/hadley/pkgdown/blob/master/R/pkgdown.R'><code>R/pkgdown.R</code></a></small>
     <div class="hidden name"><code>in_pkgdown.Rd</code></div>
     </div>
 
@@ -155,7 +155,7 @@ pkgdown and regular documentation.</p>
         
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>in_pkgdown</span>()</div><div class='output co'>#&gt; [1] TRUE</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>in_pkgdown</span>()</div><div class='output co'>#&gt; <span class='error'>Error in in_pkgdown(): could not find function "in_pkgdown"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -184,10 +184,10 @@ pkgdown and regular documentation.</p>
 <script>
   docsearch({
     appId: 'TK8WB6UEB2',
+    debug: true,
     apiKey: 'c871e0fb692cad1373a189fc7fe65300',
     indexName: 'pkgdown-search',
-    inputSelector: 'input#search-input.form-control',
-    debug: true // Set debug to true if you want to inspect the dropdown
+    inputSelector: 'input#search-input.form-control'
   });
 </script>
 

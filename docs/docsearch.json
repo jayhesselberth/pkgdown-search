@@ -15,19 +15,17 @@
   "selectors": {
     "lvl0": {
       "selector": ".contents h1",
-      "default_value": "pkgdown Homepage"
+      "default_value": "pkgdown Home page"
     },
     "lvl1": {
       "selector": ".contents h2",
       "default_value": "More info"
     },
     "lvl2": {
-      "selector": ".contents h3, .ref-arguments th, .contents .name",
+      "selector": ".contents h3, .ref-arguments th, .ref-description, .contents .name",
       "default_value": "Context"
     },
-    "lvl3": {
-      "selector": ".ref-arguments td, .ref-description p"
-    },
+    "lvl3": ".ref-arguments td",
     "text": ".contents p, .contents li, .usage, .template-article .contents .pre"
   },
   "selectors_exclude": [
@@ -35,7 +33,7 @@
   ],
   "min_indexed_level": 2,
   "custom_settings": {
-    "separatorsToIndex": "_"
+    "separatorsToIndex": "_."
   },
-  "nb_hits": 448
+  "nb_hits": 466
 }
