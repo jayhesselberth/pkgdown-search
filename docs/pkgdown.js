@@ -105,13 +105,13 @@ if(Clipboard.isSupported()) {
 
 $(function() {
 
-  var mark = function() {
+  var mark_url = function() {
 
-    var url = document.URL ;
-    var paramKey = "term" ;
+    var referrer = document.URL ;
+    var paramKey = "q" ;
 
-    if (url.indexOf("?") !== -1) {
-      var qs = url.substr(url.indexOf('?') + 1);
+    if (referrer.indexOf("?") !== -1) {
+      var qs = referrer.substr(referrer.indexOf('?') + 1);
       var qsa = qs.split('&');
       var keyword = "";
 
@@ -137,27 +137,26 @@ $(function() {
     }
   };
 
-  mark();
+  mark_url();
 
 });
 
-var matched_words = function(hit) {
+function matched_words(hit) {
   var ret = [];
 
   var hierarchy = hit._highlightResult.hierarchy;
-  var content = hit._highlightResult.content;
-
+  // loop to fetch from lvl0, lvl1, etc.
   for (var idx in hierarchy) {
-    var matches = hierarchy[idx].matchedWords;
-    if (matches.length !== 0) {
-      ret = ret.concat(matches);
-    }
+    ret = ret.concat(hierarchy[idx].matchedWords);
   }
 
-  if (content && content.matchedWords.length !== 0) {
+  var content = hit._highlightResult.content;
+  if (content) {
     ret = ret.concat(content.matchedWords);
   }
 
-  return ret;
-};
+  // return unique words
+  var ret_uniq = [...new Set(ret)];
+  return ret_uniq;
+}
 
