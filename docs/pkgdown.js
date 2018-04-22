@@ -61,9 +61,9 @@ $(document).ready(function() {
 
       if (keyword !== "") {
         console.log('highlighting:' + keyword);
-        $(".section").unmark({
+        $(".contents").unmark({
           done: function() {
-            $(".section").mark(keyword);
+            $(".contents").mark(keyword);
           }
         });
       }
