@@ -60,6 +60,7 @@ $(document).ready(function() {
       }
 
       if (keyword !== "") {
+        console.log('highlighting:' + keyword);
         $(".section").unmark({
           done: function() {
             $(".section").mark(keyword);
@@ -68,6 +69,7 @@ $(document).ready(function() {
       }
     }
   };
+
   mark();
 });
 
@@ -169,6 +171,5 @@ function updateHitURL(hit) {
     url = hit.url + '?q=' + escape(words);
   }
 
-  console.log(url);
   return url;
 }
