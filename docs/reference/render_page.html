@@ -232,8 +232,7 @@ If <code>""</code> (the default), prints to standard out.</p></td>
     inputSelector: 'input#search-input.form-control',
     transformData: function(hits) {
       return hits.map(function (hit) {
-        var matched = matched_words(hit);
-        hit.url = hit.url + '?q=' + escape(matched);
+        hit.url = updateHitURL(hit);
         return hit;
       });
     }

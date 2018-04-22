@@ -334,8 +334,7 @@ field in <code>_pkgdown.yml</code>. The default settings are equivalent to:</p><
     inputSelector: 'input#search-input.form-control',
     transformData: function(hits) {
       return hits.map(function (hit) {
-        var matched = matched_words(hit);
-        hit.url = hit.url + '?q=' + escape(matched);
+        hit.url = updateHitURL(hit);
         return hit;
       });
     }

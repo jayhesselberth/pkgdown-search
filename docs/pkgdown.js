@@ -31,8 +31,11 @@ $(function() {
       menu_anchor.closest("li.dropdown").addClass("active");
     }
   });
+});
 
+$(document).ready(function() {
   // do keyword highlighting
+  /* modified from https://jsfiddle.net/julmot/bL6bb5oo/ */
   var mark = function() {
 
     var referrer = document.URL ;
@@ -40,7 +43,8 @@ $(function() {
 
     if (referrer.indexOf("?") !== -1) {
       var qs = referrer.substr(referrer.indexOf('?') + 1);
-      var qsa = qs.split('&');
+      var qs_noarg = qs.split('#')[0];
+      var qsa = qs_noarg.split('&');
       var keyword = "";
 
       for (var i = 0; i < qsa.length; i++) {
@@ -64,9 +68,7 @@ $(function() {
       }
     }
   };
-
   mark();
-
 });
 
 function paths(pathname) {
@@ -135,26 +137,38 @@ if(Clipboard.isSupported()) {
   });
 }
 
-/* mark.js ------------------------------*/
+/* Search term highlighting ------------------------------*/
 
-/* modified from https://jsfiddle.net/julmot/bL6bb5oo/ */
-
-function matched_words(hit) {
-  var ret = [];
+function matchedWords(hit) {
+  var words = [];
 
   var hierarchy = hit._highlightResult.hierarchy;
   // loop to fetch from lvl0, lvl1, etc.
   for (var idx in hierarchy) {
-    ret = ret.concat(hierarchy[idx].matchedWords);
+    words = words.concat(hierarchy[idx].matchedWords);
   }
 
   var content = hit._highlightResult.content;
   if (content) {
-    ret = ret.concat(content.matchedWords);
+    words = words.concat(content.matchedWords);
   }
 
   // return unique words
-  var ret_uniq = [...new Set(ret)];
-  return ret_uniq;
+  var words_uniq = [...new Set(words)];
+  return words_uniq;
 }
 
+function updateHitURL(hit) {
+
+  var words = matchedWords(hit);
+  var url = "";
+
+  if (hit.anchor) {
+    url = hit.url_without_anchor + '?q=' + escape(words) + '#' + hit.anchor;
+  } else {
+    url = hit.url + '?q=' + escape(words);
+  }
+
+  console.log(url);
+  return url;
+}
