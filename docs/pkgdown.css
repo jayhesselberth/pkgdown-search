@@ -221,6 +221,9 @@ a.sourceLine:hover {
 /* mark.js ----------------------------*/
 
 mark {
-    background: orange;
-    color: black;
+  background: yellow;
+}
+
+mark.current {
+  background: orange;
 }
