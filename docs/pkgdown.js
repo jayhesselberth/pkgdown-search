@@ -99,3 +99,65 @@ if(Clipboard.isSupported()) {
   });
 }
 
+/* mark.js ------------------------------*/
+
+/* modified from https://jsfiddle.net/julmot/bL6bb5oo/ */
+
+$(function() {
+
+  var mark = function() {
+
+    var url = document.URL ;
+    var paramKey = "term" ;
+
+    if (url.indexOf("?") !== -1) {
+      var qs = url.substr(url.indexOf('?') + 1);
+      var qsa = qs.split('&');
+      var keyword = "";
+
+      for (var i = 0; i < qsa.length; i++) {
+        var currentParam = qsa[i].split('=');
+
+        if (currentParam.length !== 2) {
+          continue;
+        }
+
+        if (currentParam[0] == paramKey) {
+          keyword = decodeURIComponent(currentParam[1].replace(/\+/g, "%20"));
+        }
+      }
+
+      if (keyword !== "") {
+        $(".section").unmark({
+          done: function() {
+            $(".section").mark(keyword);
+          }
+        });
+      }
+    }
+  };
+
+  mark();
+
+});
+
+var matched_words = function(hit) {
+  var ret = [];
+
+  var hierarchy = hit._highlightResult.hierarchy;
+  var content = hit._highlightResult.content;
+
+  for (var idx in hierarchy) {
+    var matches = hierarchy[idx].matchedWords;
+    if (matches.length !== 0) {
+      ret = ret.concat(matches);
+    }
+  }
+
+  if (content && content.matchedWords.length !== 0) {
+    ret = ret.concat(content.matchedWords);
+  }
+
+  return ret;
+};
+
